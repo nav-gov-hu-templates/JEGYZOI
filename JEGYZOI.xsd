@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:enm1="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_iranyitoszam"
+        xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/JEGYZOI/5.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/JEGYZOI/5.0">
+   <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+           schemaLocation="form_xsd_metaschema.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_iranyitoszam"
+           schemaLocation="altalanos_iranyitoszam.xsd"/>
+   <element name="Doc_JEGYZOI"
+            type="tns:Doc_JEGYZOI_Type"
+            meta:metaType="DocMetaType">
+      <annotation>
+         <documentation>Bejelentő lap a köztartozásmentes adózói adatbázisból törölt személyekről történő adatszolgáltatáshoz</documentation>
+      </annotation>
+   </element>
+   <complexType name="Doc_JEGYZOI_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_JEGYZOI"
+                  type="tns:Form_JEGYZOI_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>JEGYZOI részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <simpleType name="Enum_JEGYZOI_0A0001D001A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="Baranya Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Baranya Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Bács-Kiskun Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Bács-Kiskun Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Békés Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Békés Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Borsod-Abaúj-Zemplén Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Borsod-Abaúj-Zemplén Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Csongrád-Csanád Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Csongrád-Csanád Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Fejér Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Fejér Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Győr-Moson-Sopron Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Győr-Moson-Sopron Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Hajdú-Bihar Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Hajdú-Bihar Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Heves Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Heves Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Komárom-Esztergom Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Komárom-Esztergom Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Nógrád Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Nógrád Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Pest Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Pest Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Somogy Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Somogy Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Szabolcs-Szatmár-Bereg Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Szabolcs-Szatmár-Bereg Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Jász-Nagykun-Szolnok Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Jász-Nagykun-Szolnok Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Tolna Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Tolna Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Vas Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Vas Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Veszprém Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Veszprém Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Zala Vármegyei Kormányhivatal">
+            <annotation>
+               <documentation>Zala Vármegyei Kormányhivatal</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Budapest Főváros Kormányhivatala">
+            <annotation>
+               <documentation>Budapest Főváros Kormányhivatala</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_JEGYZOI_0BXXXXC001A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="1">
+            <annotation>
+               <documentation>1</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4">
+            <annotation>
+               <documentation>4</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="5">
+            <annotation>
+               <documentation>5</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="6">
+            <annotation>
+               <documentation>6</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="7">
+            <annotation>
+               <documentation>7</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="8">
+            <annotation>
+               <documentation>8</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="9">
+            <annotation>
+               <documentation>9</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="10">
+            <annotation>
+               <documentation>10</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="11">
+            <annotation>
+               <documentation>11</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="12">
+            <annotation>
+               <documentation>12</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="13">
+            <annotation>
+               <documentation>13</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="14">
+            <annotation>
+               <documentation>14</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="15">
+            <annotation>
+               <documentation>15</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="16">
+            <annotation>
+               <documentation>16</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="17">
+            <annotation>
+               <documentation>17</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="18">
+            <annotation>
+               <documentation>18</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="19">
+            <annotation>
+               <documentation>19</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="20">
+            <annotation>
+               <documentation>20</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="21">
+            <annotation>
+               <documentation>21</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="22">
+            <annotation>
+               <documentation>22</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="23">
+            <annotation>
+               <documentation>23</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="24">
+            <annotation>
+               <documentation>24</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="25">
+            <annotation>
+               <documentation>25</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_JEGYZOI_0BXXXXC00500A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="1 - Bolgár Országos Önkormányzat - 1097 Budapest, Fehér Holló utca 6.">
+            <annotation>
+               <documentation>1 - Bolgár Országos Önkormányzat - 1097 Budapest, Fehér Holló utca 6.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2 - Magyarországi Görögök Országos Önkormányzata - 1054 Budapest, Vécsey utca 5.">
+            <annotation>
+               <documentation>2 - Magyarországi Görögök Országos Önkormányzata - 1054 Budapest, Vécsey utca 5.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3 - Országos Horvát Önkormányzat - 1089 Budapest, Bíró Lajos u. 24">
+            <annotation>
+               <documentation>3 - Országos Horvát Önkormányzat - 1089 Budapest, Bíró Lajos u. 24</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4 - Országos Lengyel Önkormányzat  - 1102 Budapest, Állomás u. 10.">
+            <annotation>
+               <documentation>4 - Országos Lengyel Önkormányzat  - 1102 Budapest, Állomás u. 10.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="5 - Magyarországi Németek Országos Önkormányzata - 1026 Budapest, Júlia u. 9">
+            <annotation>
+               <documentation>5 - Magyarországi Németek Országos Önkormányzata - 1026 Budapest, Júlia u. 9</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="6 - Országos Örmény Önkormányzat - 1052 Budapest, Semmelweis u. 17">
+            <annotation>
+               <documentation>6 - Országos Örmény Önkormányzat - 1052 Budapest, Semmelweis u. 17</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="7 - Országos Roma Önkormányzat - 1074 Budapest, Dohány utca 76.">
+            <annotation>
+               <documentation>7 - Országos Roma Önkormányzat - 1074 Budapest, Dohány utca 76.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="8 - Országos Román Önkormányzat - 5700 Gyula, Eminescu u. 1.">
+            <annotation>
+               <documentation>8 - Országos Román Önkormányzat - 5700 Gyula, Eminescu u. 1.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="9 - Országos Ruszin Önkormányzat - 1147 Budapest, Gyarmat u. 85/B.">
+            <annotation>
+               <documentation>9 - Országos Ruszin Önkormányzat - 1147 Budapest, Gyarmat u. 85/B.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="10 - Szerb Országos Önkormányzat - 1055 Budapest, Falk Miksa utca 3.">
+            <annotation>
+               <documentation>10 - Szerb Országos Önkormányzat - 1055 Budapest, Falk Miksa utca 3.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="11 - Országos Szlovák Önkormányzat - 1114 Budapest, Fadrusz u. 11/A">
+            <annotation>
+               <documentation>11 - Országos Szlovák Önkormányzat - 1114 Budapest, Fadrusz u. 11/A</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="12 - Országos Szlovén Önkormányzat - 9985 Felsőszölnök, Templom u. 8.">
+            <annotation>
+               <documentation>12 - Országos Szlovén Önkormányzat - 9985 Felsőszölnök, Templom u. 8.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="13 - Ukrán Országos Önkormányzat - 1065 Budapest, Hajos u. 1.">
+            <annotation>
+               <documentation>13 - Ukrán Országos Önkormányzat - 1065 Budapest, Hajos u. 1.</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <complexType name="Form_JEGYZOI_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány JEGYZOI részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120516"
+                  type="tns:Block_JEGYZOI_120516_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Illetékes kormányhivatal</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120545"
+                  type="tns:Block_JEGYZOI_120545_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Adatszolgáltatással érintett magánszemélyek bejelentése</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_JEGYZOI_120516_Type">
+      <annotation>
+         <documentation>Illetékes kormányhivatal</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120523"
+                  type="tns:FieldGroup_JEGYZOI_120523_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Illetékes kormányhivatal</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_JEGYZOI_120545_Type">
+      <annotation>
+         <documentation>Adatszolgáltatással érintett magánszemélyek bejelentése</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120530"
+                  type="tns:Chain_JEGYZOI_120530_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Képviselő-testület</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Chain_JEGYZOI_120530_Type">
+      <annotation>
+         <documentation>Képviselő-testület</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="99">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120531"
+                           type="tns:FieldGroup_JEGYZOI_120531_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Képviselő-testület</documentation>
+                     </annotation>
+                  </element>
+                  <element name="Chain_120534"
+                           type="tns:Chain_JEGYZOI_120534_Type"
+                           minOccurs="0"
+                           meta:metaType="ChainMetaType">
+                     <annotation>
+                        <documentation>Adatbejelentés</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+      <attribute name="sdgID" use="required" fixed="120527"/>
+   </complexType>
+   <complexType name="Chain_JEGYZOI_120534_Type">
+      <annotation>
+         <documentation>Adatbejelentés</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="792">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120535"
+                           type="tns:FieldGroup_JEGYZOI_120535_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Adatbejelentés</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="FieldGroup_JEGYZOI_120523_Type">
+      <annotation>
+         <documentation>Illetékes kormányhivatal</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (önk_adószám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Megnevezése (önk_megnev)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001D001A"
+                  minOccurs="0"
+                  type="tns:Enum_JEGYZOI_0A0001D001A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Megnevezése (korm_hiv_megnevezése)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Címe ¦ Irányítószám (korm_hiv_irsz)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="4"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001D003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Címe ¦ Város / község (korm_hiv_város)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001D004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Címe ¦ Közterület neve (korm_hiv_közt_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001D005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Címe ¦ Közterület jellege (korm_hiv_közt_jellege)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="20"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001D006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Címe ¦ Házszám (korm_hiv_hsz)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="15"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_JEGYZOI_120531_Type">
+      <annotation>
+         <documentation>Képviselő-testület</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő-testület neve (Kérjük a képviselő-testületek hivatalos, rövidítés nélküli nevét adja meg!) (képv_test_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő-testület címe ¦ Irányítószám (képv_test_irsz)</documentation>
+            </annotation>
+            <simpleType>
+               <union memberTypes="enm1:altalanos_iranyitoszam_2">
+                  <simpleType>
+                     <restriction base="string">
+                        <minLength value="1"/>
+                        <maxLength value="4"/>
+                        <pattern value="[0-9]+"/>
+                     </restriction>
+                  </simpleType>
+               </union>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő-testület címe ¦ Város / község (képv_test_város)</documentation>
+            </annotation>
+            <simpleType>
+               <union memberTypes="enm1:altalanos_iranyitoszam_1">
+                  <simpleType>
+                     <restriction base="string">
+                        <minLength value="1"/>
+                        <maxLength value="80"/>
+                        <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+                     </restriction>
+                  </simpleType>
+               </union>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő-testület címe ¦ Közterület neve (képv_test_közt_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő-testület címe ¦ Közterület jellege (képv_test_közt_jelleg)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="20"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő-testület címe ¦ Házszám (képv_test_hsz)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="15"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC00500A"
+                  minOccurs="0"
+                  type="tns:Enum_JEGYZOI_0BXXXXC00500A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kisebbségi képviselő-testület esetén válassza ki a felettes szervet! (nemzetiségi_önk)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_JEGYZOI_120535_Type">
+      <annotation>
+         <documentation>Adatbejelentés</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC0001AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jelleg ([01]A1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="1"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC0001BA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adóazonosító jel ([01]B1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC0001CA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Név ([01]C1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+</schema>
